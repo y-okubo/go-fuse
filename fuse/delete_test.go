@@ -65,7 +65,8 @@ func TestDeleteNotify(t *testing.T) {
 		}
 		time.Sleep(10 * time.Millisecond)
 	}
-	
+
+	// Simulate deletion+mkdir coming from the network
 	fs.Root().Inode().RmChild("testdir")
 	_, code := fs.Root().Inode().FsNode().Mkdir("testdir", 0755, nil)
 	if !code.Ok() {
