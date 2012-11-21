@@ -47,6 +47,24 @@ type MountState struct {
 	loops     sync.WaitGroup
 }
 
+// Use this method to make synchronization between accessing a file-system
+// and accessing the object implementing the filesystem explicit, so
+// thread-sanitizer does not get confused.
+//
+//   fs := SomeFSObj{ReadCalled: false}
+//   ms := NewMountState(fs)
+//   ms.Mount("/mnt", nil)
+//   ..
+//   mountstate.ThreadSanitizerSync()
+//   ioutil.ReadFile("/mnt/file")
+//
+//   if fs.ReadCalled { ...  // no race condition here.
+//
+func (ms *MountState) ThreadSanitizerSync() {
+	ms.reqMu.Lock()
+	ms.reqMu.Unlock()
+}
+
 func (ms *MountState) KernelSettings() raw.InitIn {
 	return ms.kernelSettings
 }
