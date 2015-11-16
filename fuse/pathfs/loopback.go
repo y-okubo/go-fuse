@@ -8,8 +8,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/hanwen/go-fuse/fuse"
-	"github.com/hanwen/go-fuse/fuse/nodefs"
+	"github.com/y-okubo/go-fuse/fuse"
+	"github.com/y-okubo/go-fuse/fuse/nodefs"
 )
 
 type loopbackFileSystem struct {

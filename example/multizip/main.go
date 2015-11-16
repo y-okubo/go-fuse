@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/hanwen/go-fuse/fuse/nodefs"
-	"github.com/hanwen/go-fuse/fuse/pathfs"
-	"github.com/hanwen/go-fuse/zipfs"
+	"github.com/y-okubo/go-fuse/fuse/nodefs"
+	"github.com/y-okubo/go-fuse/fuse/pathfs"
+	"github.com/y-okubo/go-fuse/zipfs"
 )
 
 func main() {

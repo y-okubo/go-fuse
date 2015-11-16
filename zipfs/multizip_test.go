@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hanwen/go-fuse/fuse/nodefs"
-	"github.com/hanwen/go-fuse/fuse/pathfs"
+	"github.com/y-okubo/go-fuse/fuse/nodefs"
+	"github.com/y-okubo/go-fuse/fuse/pathfs"
 )
 
 // VerboseTest returns true if the testing framework is run with -v.

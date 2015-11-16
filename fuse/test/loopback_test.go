@@ -13,9 +13,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hanwen/go-fuse/fuse"
-	"github.com/hanwen/go-fuse/fuse/nodefs"
-	"github.com/hanwen/go-fuse/fuse/pathfs"
+	"github.com/y-okubo/go-fuse/fuse"
+	"github.com/y-okubo/go-fuse/fuse/nodefs"
+	"github.com/y-okubo/go-fuse/fuse/pathfs"
 )
 
 const mode uint32 = 0757

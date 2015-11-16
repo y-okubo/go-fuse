@@ -3,7 +3,7 @@ package nodefs
 import (
 	"syscall"
 
-	"github.com/hanwen/go-fuse/fuse"
+	"github.com/y-okubo/go-fuse/fuse"
 )
 
 func (f *loopbackFile) Allocate(off uint64, sz uint64, mode uint32) fuse.Status {

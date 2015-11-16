@@ -3,7 +3,7 @@ package nodefs
 import (
 	"fmt"
 
-	"github.com/hanwen/go-fuse/fuse"
+	"github.com/y-okubo/go-fuse/fuse"
 )
 
 // String provides a debug string for the given file.
